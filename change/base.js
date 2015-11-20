@@ -4,7 +4,12 @@ $(document).ready(function(){
 
   $("#time").text( Date.now() );
   $("input.add").on("change", function handleChange(event) {
-    var left = $("#left").val();
-    var right = $("#right").val();
-    });
-});
+  	var left = $("input#left").val();
+  	var right = $("input#right").val();
+  	var leftVal = parseInt(left) || 0;
+  	var rightVal = parseInt(right) || 0;
+  	$("input#total").val(leftVal + rightVal);
+  	}
+	);
+	}
+);
